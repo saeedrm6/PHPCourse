@@ -26,15 +26,38 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Simple Login Form</h1>
+      <h1 class="header center orange-text">
+      <?php 
+        $tmp = array();
+        $tmp[0] =  "dfdf";
+        $tmp[1] = "dfdd";
+        $tmp[2] = "dfdfdf";
+        $asoc = array('name' =>  "john",'tel' => "1234" );
+
+        $form1 = array('firstName' => "firstName", 'lastName' => "last Name", 'tel' => "Enter your phone" );
+
+        echo $_SERVER['PHP_SELF'];
+      
+       ?>
+      </h1>
       <div class="row center">
         <div class="card col s4 offset-s4 grey lighten-4">
      		<!-- <h5 class="header col s12 light">Please enter Login Status</h5>	 -->
      		<br>
         	<sapn class="card-title center">Please Login Here</sapn>
         <div class="card-content center">
-        	<input type="text" name="name" placeholder="Username">
-        	<input type="password" name="password" placeholder="password">
+<!--         	<input type="text" name="name" placeholder="Username">
+        	<input type="password" name="password" placeholder="password"> -->
+            <?php 
+                foreach ($form1 as $label => $placeholder) {
+                  echo '<label>'.$label.'</label> 
+                        <input type="text" name="'.$label.'" placeholder="'.$placeholder.'">';
+                }
+
+
+
+             ?>
+
         </div>
         <div class="card-action center">
         	<button class="btn waves-effect waves-light" type="submit" name="action">Click Me!</button>
@@ -54,7 +77,7 @@
     <div class="section">
  -->
       <!--   Icon Section   -->
-    <!--   <div class="row">
+      <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
@@ -112,6 +135,11 @@
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
+            <?php 
+              foreach ($asoc as $x => $x_value) {
+                echo '<li><a class="white-text" href="#!">'.$x_value.'</a></li>'; 
+              }
+             ?>
             <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
@@ -125,7 +153,7 @@
       Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
-  </footer> -->
+  </footer>
 
 
   <!--  Scripts-->
@@ -135,3 +163,16 @@
 
   </body>
 </html>
+
+
+
+<?php 
+  // echo "string";
+  
+
+  $tmp = 5;
+
+
+ ?>
+
+
